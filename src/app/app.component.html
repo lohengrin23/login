@@ -1,0 +1,22 @@
+﻿<!-- nav -->
+<nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLink="/">Consolidada</a>
+        <a class="nav-item nav-link" (click)="logout()">Cerrar Sesión</a>
+    </div>
+</nav>
+
+<!-- main app container -->
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
+
+<!-- credits -->
+<div class="text-center mt-4">
+    <p>
+        <a href="#" target="_top">Posición Consolidada Mercantil Banco Universal</a>
+    </p>
+    <p>
+        <a href="#" target="_top">Innovalab | Equipo Web</a>
+    </p>
+</div>
