@@ -11,6 +11,8 @@ export class LoginComponent implements OnInit {
     loading = false;
     submitted = false;
     returnUrl: string;
+    hide = false;
+    hide2 = false;
     error = '';
 
     constructor(
@@ -57,5 +59,17 @@ export class LoginComponent implements OnInit {
                     this.error = error;
                     this.loading = false;
                 });
+    }
+
+    onFocus(){
+        console.log("focused");
+        this.loginForm.get('username');
+        this.hide = !this.hide;
+    }
+
+    onFocus2(){
+        console.log("focused");
+        this.loginForm.get('password').setValue('');
+        this.hide2 = !this.hide2;
     }
 }
